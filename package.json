@@ -1,0 +1,15 @@
+{
+  "name": "aquaimpact",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AquaImpact — Turn every observation into impact. IEEE OneAquaHealth Global Hackathon 2026, Track 5: Community & Gamification.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "reset-demo": "node backend/reset-demo.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
